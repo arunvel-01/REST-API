@@ -2,6 +2,10 @@
 
 This is a simple RESTful API project using Express.js and MongoDB.
 
+# LIVE DEMO
+
+https://rest-api-jxk3.onrender.com
+
 ## Installation
 
 1. Clone the repository:
