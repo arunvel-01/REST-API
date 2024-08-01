@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const { job } = require('./cron');
+
 require("dotenv").config();
 
 const app = express();
@@ -145,6 +147,8 @@ app.route("/articles/:articleTitle")
       res.status(500).send("Internal Server Error");
     }
   });
+
+job.start();
 
 const port = process.env.PORT || 3000;
 
